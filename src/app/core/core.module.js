@@ -4,6 +4,7 @@ import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-material';
 import 'angular-animate';
+import * as CONSTANTS from './core.constants';
 import BackendService from './backendService/backendService.module';
 
 /**
@@ -18,6 +19,7 @@ const coreModule = angular.module('app.core', [
 	'ui.router',
 	'ngMaterial',
 	BackendService.name
-]);
+])
+	.constant('APP_NAME', CONSTANTS.HEREMAPSCONFIG);
 
 export default coreModule;

@@ -1,6 +1,7 @@
 import angular from 'angular';
 import AppCore from './core/core.module';
 import Header from './features/headerBar/headerBar.module';
+import Search from './features/search/search.module';
 
 // Construct Module
 import appComponent from './app.component';
@@ -19,7 +20,8 @@ const appModule = angular.module('app', [
 	AppCore.name,
 
 	// Features
-	Header.name
+	Header.name,
+	Search.name
 ])
 	.component('app', appComponent)
 	.config(config);
