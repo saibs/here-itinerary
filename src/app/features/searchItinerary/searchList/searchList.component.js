@@ -5,6 +5,7 @@ const searchComponent = {
 	template,
 	controller,
 	bindings: {
+		findItinerary: '&'
 	}
 };
 

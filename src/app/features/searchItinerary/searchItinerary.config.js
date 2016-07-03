@@ -1,11 +1,14 @@
 import template from './searchItinerary.template.html';
+import controller from './searchItinerary.controller';
 
 const searchItineraryConfig = ($stateProvider) => {
 
 	$stateProvider
 		.state('search', {
 			url: '/search',
-			template
+			template,
+			controller,
+			controllerAs: '$ctrl'
 		});
 };
 

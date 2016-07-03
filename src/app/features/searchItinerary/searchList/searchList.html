@@ -5,15 +5,46 @@
 		class="md-block"
 		flex
 		md-input-name="search"
-		md-selected-item="$ctrl.selectedItem"
+		md-selected-item="$ctrl.selectedAddress"
 		md-search-text="$ctrl.searchText"
 		md-items="item in $ctrl.querySearch($ctrl.searchText)"
 		md-item-text="item.Location.Address.Label"
 		md-floating-label="Search"
 		md-delay="300"
+		md-selected-item-change="$ctrl.selectAddress(item)"
 	>
 		<md-item-template>
 			<span md-highlight-text="$ctrl.searchText" md-highlight-flags="gi">{{item.Location.Address.Label}}</span>
 		</md-item-template>
 	</md-autocomplete>
 </form>
+
+<ul dnd-list="$ctrl.searchList">
+	<li ng-repeat="address in $ctrl.searchList"
+		dnd-draggable="address"
+		dnd-moved="$ctrl.searchList.splice($index, 1)"
+		dnd-effect-allowed="move"
+		dnd-selected="$ctrl.selectedAddressDnD = address"
+		ng-class="{'selected': $ctrl.selectedAddressDnD === address}"
+	>
+		<dnd-nodrag>
+			<span dnd-handle>
+				<md-icon>location_on</md-icon>
+			</span>
+			<span>{{address.Location.Address.Label}}</span>
+			<md-icon
+				class="searchList__remove-icon"
+				ng-click="$ctrl.removeAddress($index)"
+			>
+				remove
+			</md-icon>
+		</dnd-nodrag>
+	</li>
+</ul>
+
+<md-button
+	class="md-primary"
+	ng-click="$ctrl.findItinerary({ searchList: $ctrl.searchList })"
+>
+	Find Itinerary
+</md-button>
