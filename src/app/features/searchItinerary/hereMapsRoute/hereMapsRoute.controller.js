@@ -19,7 +19,8 @@ class HereMapsRouteController {
 		this.platform = new H.service.Platform({
 			/*eslint-disable */
 			app_id: this.HEREMAPSCONFIG.APP_CONFIG,
-			app_code: this.HEREMAPSCONFIG.APP_CODE
+			app_code: this.HEREMAPSCONFIG.APP_CODE,
+			useHTTPS: true
 			/*eslint-enable */
 		});
 		this.defaultLayers = this.platform.createDefaultLayers();
