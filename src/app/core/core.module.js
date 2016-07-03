@@ -6,7 +6,7 @@ import 'angular-material';
 import 'angular-animate';
 import * as CONSTANTS from './core.constants';
 import BackendService from './backendService/backendService.module';
-import GeoLocationService from './geoLocationService/GeoLocation.module';
+import GeoLocationService from './geoLocationService/geoLocation.module';
 
 /**
  * @ngdoc overview
