@@ -5,13 +5,21 @@
 >
     <div
         flex
+        layout-wrap
         layout="row"
     >
         <search-list
-            flex
-            flex-gt-sm="33"
+            flex="100"
+            flex-gt-sm="30"
             find-itinerary="$ctrl.findItinerary(searchList)"
         >
         </search-list>
+        <here-maps-route
+            flex="100"
+            flex-gt-sm="65"
+            flex-offset-gt-sm="5"
+            way-points="$ctrl.wayPoints"
+        >
+        </here-maps-route>
     </div>
 </div>

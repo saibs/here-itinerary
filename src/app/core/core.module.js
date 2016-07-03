@@ -6,6 +6,7 @@ import 'angular-material';
 import 'angular-animate';
 import * as CONSTANTS from './core.constants';
 import BackendService from './backendService/backendService.module';
+import GeoLocationService from './geoLocationService/GeoLocation.module';
 
 /**
  * @ngdoc overview
@@ -18,7 +19,8 @@ const coreModule = angular.module('app.core', [
 	// Angular modules
 	'ui.router',
 	'ngMaterial',
-	BackendService.name
+	BackendService.name,
+	GeoLocationService.name
 ])
 	.constant('HEREMAPSCONFIG', CONSTANTS.HEREMAPSCONFIG);
 

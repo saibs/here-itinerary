@@ -15,8 +15,12 @@ class GeoLocationService {
 				(position) => {
 					deferred.resolve(position.coords);
 				},
-				(err) => {
-					deferred.reject(err);
+				() => {
+					// If error return Berlin coords
+					deferred.resolve({
+						latitude: 52.5160,
+						longitude: 13.3779
+					});
 				});
 		}
 

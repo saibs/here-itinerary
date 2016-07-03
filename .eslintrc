@@ -11,7 +11,8 @@
 
   "globals": {
     "angular": false,
-    "inject": true
+    "inject": true,
+    "H": true
   },
 
   "rules": {

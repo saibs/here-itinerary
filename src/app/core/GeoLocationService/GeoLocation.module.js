@@ -1,9 +1,9 @@
 import angular from 'angular';
 
-import StorageService from './StorageService.service';
+import GeoLocationService from './GeoLocation.service';
 
-const StorageServiceModule = angular.module('StorageService', [
+const GeoLocationServiceModule = angular.module('GeoLocationService', [
 ])
-	.service('StorageService', StorageService);
+	.service('GeoLocationService', GeoLocationService);
 
-export default StorageServiceModule;
+export default GeoLocationServiceModule;
