@@ -2,7 +2,7 @@ import angular from 'angular';
 
 import GeoLocationService from './GeoLocation.service';
 
-const GeoLocationServiceModule = angular.module('GeoLocationService', [
+const GeoLocationServiceModule = angular.module('app.geoLocationService', [
 ])
 	.service('GeoLocationService', GeoLocationService);
 
