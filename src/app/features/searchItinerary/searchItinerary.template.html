@@ -8,17 +8,30 @@
         layout-wrap
         layout="row"
     >
-        <search-list
+        <div
             flex="100"
             flex-gt-sm="30"
-            find-itinerary="$ctrl.findItinerary(searchList)"
         >
-        </search-list>
+            <search-list
+                find-itinerary="$ctrl.findItinerary(searchList)"
+            >
+            </search-list>
+            <md-input-container>
+                <md-select
+                    ng-model="$ctrl.selectedMode"
+                >
+                    <md-option ng-repeat="mode in $ctrl.modes" value="{{mode}}">
+                        {{mode}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
         <here-maps-route
             flex="100"
             flex-gt-sm="65"
             flex-offset-gt-sm="5"
             way-points="$ctrl.wayPoints"
+            mode="{{$ctrl.selectedMode}}"
         >
         </here-maps-route>
     </div>

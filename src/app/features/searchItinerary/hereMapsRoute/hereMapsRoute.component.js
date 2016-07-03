@@ -5,7 +5,8 @@ const hereMapsRouteComponent = {
 	template,
 	controller,
 	bindings: {
-		wayPoints: '<'
+		wayPoints: '<',
+		mode: '@'
 	}
 };
 

@@ -64,7 +64,7 @@ class HereMapsRouteController {
 	calculateRouteFromAtoB() {
 		const router = this.platform.getRoutingService(),
 			routeRequestParams = {
-				mode: 'fastest;car',
+				mode: `fastest;${this.mode}`,
 				representation: 'display',
 				routeattributes: 'waypoints,summary,shape,legs',
 				maneuverattributes: 'direction,action'

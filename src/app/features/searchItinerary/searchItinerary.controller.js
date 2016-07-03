@@ -2,6 +2,8 @@ import {forEach as _forEach} from 'lodash';
 
 class SearchItinerary {
 	constructor() {
+		this.modes = ['car', 'pedestrian', 'publicTransport'];
+		this.selectedMode = this.modes[0];
 	}
 	findItinerary(searchList) {
 		this.searchList = searchList;
