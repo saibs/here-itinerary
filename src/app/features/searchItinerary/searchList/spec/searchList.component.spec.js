@@ -1,6 +1,6 @@
-import component from '../search.component';
-import template from '../search.html';
-import controller from '../search.controller';
+import component from '../searchList.component';
+import template from '../searchList.html';
+import controller from '../searchList.controller';
 
 describe('Component: search', function() {
 	it('includes the intended template', () => {

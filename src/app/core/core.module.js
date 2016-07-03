@@ -20,6 +20,6 @@ const coreModule = angular.module('app.core', [
 	'ngMaterial',
 	BackendService.name
 ])
-	.constant('APP_NAME', CONSTANTS.HEREMAPSCONFIG);
+	.constant('HEREMAPSCONFIG', CONSTANTS.HEREMAPSCONFIG);
 
 export default coreModule;

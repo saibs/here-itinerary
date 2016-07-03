@@ -1,0 +1,19 @@
+<form
+	name="$ctrl.searchForm"
+>
+	<md-autocomplete
+		class="md-block"
+		flex
+		md-input-name="search"
+		md-selected-item="$ctrl.selectedItem"
+		md-search-text="$ctrl.searchText"
+		md-items="item in $ctrl.querySearch($ctrl.searchText)"
+		md-item-text="item.Location.Address.Label"
+		md-floating-label="Search"
+		md-delay="300"
+	>
+		<md-item-template>
+			<span md-highlight-text="$ctrl.searchText" md-highlight-flags="gi">{{item.Location.Address.Label}}</span>
+		</md-item-template>
+	</md-autocomplete>
+</form>

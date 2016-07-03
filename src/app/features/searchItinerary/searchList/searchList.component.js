@@ -1,5 +1,5 @@
-import template from './search.html';
-import controller from './search.controller';
+import template from './searchList.html';
+import controller from './searchList.controller';
 
 const searchComponent = {
 	template,
